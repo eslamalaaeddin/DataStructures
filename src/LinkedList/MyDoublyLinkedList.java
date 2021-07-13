@@ -1,6 +1,6 @@
 package LinkedList;
 
-import java.util.Iterator;
+import java.util.*;
 
 public class MyDoublyLinkedList<T> implements Iterable<Node<T>> {
     //nulls mean empty linked list
@@ -13,7 +13,7 @@ public class MyDoublyLinkedList<T> implements Iterable<Node<T>> {
         while (traversal.next != null) {
             Node<T> nextToTraversal = traversal.next;
             traversal.previous = traversal.next = null;
-            traversal.data = null;
+            traversal.value = null;
             traversal.next = nextToTraversal;
         }
         head = tail = traversal = null;
@@ -28,9 +28,9 @@ public class MyDoublyLinkedList<T> implements Iterable<Node<T>> {
         return size() == 0;
     }
 
-    //element means data
+    //element means value
     public void addLast(T element) {
-        Node<T> addedNode = new Node<>(element, null, null);
+        Node<T> addedNode = new Node(element, null, null);
 
         if (isEmpty())
             head = tail = addedNode;
@@ -46,7 +46,7 @@ public class MyDoublyLinkedList<T> implements Iterable<Node<T>> {
     }
 
     public void addFirst(T element) {
-        Node<T> addedNode = new Node<>(element, null, null);
+        Node<T> addedNode = new Node(element, null, null);
 
         if (isEmpty())
             head = tail = addedNode;
@@ -65,21 +65,21 @@ public class MyDoublyLinkedList<T> implements Iterable<Node<T>> {
         if (isEmpty())
             throw new RuntimeException("Empty List");
 
-        return head.data;
+        return head.value;
     }
 
     public T peakLast() {
         if (isEmpty())
             throw new RuntimeException("Empty List");
 
-        return tail.data;
+        return tail.value;
     }
 
     public T removeFirst() {
         if (isEmpty())
             throw new RuntimeException("Empty List");
 
-        T data = head.data;
+        T value = head.value;
         head = head.next;
         --size;
 
@@ -90,14 +90,14 @@ public class MyDoublyLinkedList<T> implements Iterable<Node<T>> {
         else
             head.previous = null;
 
-        return data;
+        return value;
     }
 
     public T removeLast() {
         if (isEmpty())
             throw new RuntimeException("Empty List");
 
-        T data = tail.data;
+        T value = tail.value;
         tail = tail.previous;
         --size;
 
@@ -108,7 +108,7 @@ public class MyDoublyLinkedList<T> implements Iterable<Node<T>> {
         else
             tail.next = null;
 
-        return data;
+        return value;
     }
 
     public boolean remove(T element) {
@@ -122,12 +122,12 @@ public class MyDoublyLinkedList<T> implements Iterable<Node<T>> {
         }
 
         for (Node<T> item : this) {
-            if (item.data.equals(element)) {
+            if (item.value.equals(element)) {
 
-                if (item.data.equals(tail.data))
+                if (item.value.equals(tail.value))
                     removeLast();
 
-                else if (item.data.equals(head.data))
+                else if (item.value.equals(head.value))
                     removeFirst();
 
                 else {
@@ -153,7 +153,7 @@ public class MyDoublyLinkedList<T> implements Iterable<Node<T>> {
             return;
         }
         for (Node<T> node : this) {
-            System.out.print(node.data + " ");
+            System.out.print(node.value + " ");
         }
         System.out.print("\n----------");
     }
@@ -172,7 +172,7 @@ public class MyDoublyLinkedList<T> implements Iterable<Node<T>> {
             @Override
             public Node<T> next() {
                 Node<T> currentNode = traversal;
-                T data = traversal.data;
+                T value = traversal.value;
                 traversal = traversal.next;
                 return currentNode;
             }
@@ -181,12 +181,12 @@ public class MyDoublyLinkedList<T> implements Iterable<Node<T>> {
 }
 
 class Node<T> {
-    T data;
+    T value;
     Node<T> previous, next;
 
 
-    public Node(T data, Node<T> previous, Node<T> next) {
-        this.data = data;
+    public Node(T value, Node<T> previous, Node<T> next) {
+        this.value = value;
         this.previous = previous;
         this.next = next;
     }

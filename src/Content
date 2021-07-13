@@ -1,13 +1,13 @@
-Learn and master the most common data structures in this full course from Google engineer William Fiset. This course teaches data structures to beginners using high quality animations to represent the data structures visually.
+Learn and master the most common value structures in this full course from Google engineer William Fiset. This course teaches value structures to beginners using high quality animations to represent the value structures visually.
 
-You will learn how to code various data structures together with simple to follow step-by-step instructions. Every data structure presented will be accompanied by some working source code (in Java) to solidify your understanding.
+You will learn how to code various value structures together with simple to follow step-by-step instructions. Every value structure presented will be accompanied by some working source code (in Java) to solidify your understanding.
 
-💻 Code: https://github.com/williamfiset/data-...
+💻 Code: https://github.com/williamfiset/value-...
 
 🎥 Course created by William Fiset. Check out his YouTube channel: https://www.youtube.com/channel/UCD8y...
 
 ⭐️ Course Contents ⭐️
-⌨️ (0:00:00) Abstract data types
+⌨️ (0:00:00) Abstract value types
 ⌨️ (0:04:28) Introduction to Big-O
 ⌨️ (0:17:00) DynamicArray and Static Arrays
 ⌨️ (0:27:40) DynamicArray Array Code
@@ -57,7 +57,7 @@ You will learn how to code various data structures together with simple to follo
 ⌨️ (6:56:43) AVL tree insertion
 ⌨️ (7:05:42) AVL tree removals
 ⌨️ (7:14:12) AVL tree source code
-⌨️ (7:30:49) Indexed Priority Queue | Data Structure
-⌨️ (7:55:10) Indexed Priority Queue | Data Structure | Source Code
+⌨️ (7:30:49) Indexed Priority Queue | value Structure
+⌨️ (7:55:10) Indexed Priority Queue | value Structure | Source Code
 
 --

@@ -1,9 +1,7 @@
 package Stack;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
+
 
 public class MyStack<T> implements Iterable<T> {
     private final List<T> stackList = new LinkedList<>();
